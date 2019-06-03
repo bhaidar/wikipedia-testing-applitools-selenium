@@ -50,9 +50,10 @@ const chalk = require("chalk");
     // Locate the Search input field, enter the text "Software Testing" and hit Enter
     let searchInputField = await driver.findElement(By.name("search"));
     if (searchInputField) {
-      searchInputField.sendKeys("Software Testing\n");
+      searchInputField.sendKeys("Software Testability\n");
     }
 
+    // Wait until the page loads and the firstHeading element is rendered
     await driver.wait(function() {
       return driver.findElement(By.id("firstHeading"));
     }, 2000);
